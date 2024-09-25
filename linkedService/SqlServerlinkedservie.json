@@ -1,0 +1,21 @@
+{
+	"name": "SqlServerlinkedservie",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "LAPTOP-SRPRH5B1",
+			"database": "practice",
+			"encrypt": "optional",
+			"trustServerCertificate": false,
+			"authenticationType": "Windows",
+			"userName": "prabhakar",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI4NDUzMjdhNi1jZDJkLTQ5MGQtYjk3Mi1lZGNjMWQ0OWUwYjQiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "sharedselfIR",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"name": "sep24exercise2",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "ddf6f354-e340-421f-8421-08a5e4e94ec5",
+		"tenantId": "a9216dc1-f2b9-448e-b87a-873191103152"
+	}
+}
