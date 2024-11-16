@@ -15,10 +15,6 @@
             "type": "string",
             "defaultValue": "https://KV-DEV-LS.vault.azure.net/"
         },
-        "sharedselfIR_properties_typeProperties_linkedInfo_resourceId": {
-            "type": "string",
-            "defaultValue": "/subscriptions/1693b4f5-75a9-4581-8cc0-10266837daa3/resourcegroups/RG1TestGroup/providers/Microsoft.DataFactory/factories/sep24exe2-uat/integrationruntimes/selfhostedIR"
-        }
     },
     "variables": {
         "factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
