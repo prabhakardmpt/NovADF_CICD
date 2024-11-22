@@ -14,7 +14,7 @@
         "ls_kv_nov24_properties_typeProperties_baseUrl": {
             "type": "string",
             "defaultValue": "https://KV-DEV-LS.vault.azure.net/"
-        },
+        
     },
     "variables": {
         "factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
