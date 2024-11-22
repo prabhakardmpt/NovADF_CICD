@@ -1,5 +1,4 @@
 name: ADF Pipeline
-run-name: ADF-deploy-${{ inputs.ENV }}
 on:
   workflow_dispatch:
     inputs:
