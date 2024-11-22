@@ -10,9 +10,6 @@
 		},
 		"ls_kv_nov24_properties_typeProperties_baseUrl": {
 			"value": "https://KV-DEV-LS.vault.azure.net/"
-		},
-		"sharedselfIR_properties_typeProperties_linkedInfo_resourceId": {
-			"value": "/subscriptions/1693b4f5-75a9-4581-8cc0-10266837daa3/resourcegroups/RG1TestGroup/providers/Microsoft.DataFactory/factories/Sep24PracticeADF/integrationruntimes/selfhostedIR"
 		}
 	}
 }
