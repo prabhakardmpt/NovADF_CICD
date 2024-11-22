@@ -3,7 +3,7 @@ run-name: ADF-deploy-${{ inputs.ENV }}
 on:
   workflow_dispatch:
     inputs:
-       ENV:
+      ENV:
          required: true
          type: string
    # push:
