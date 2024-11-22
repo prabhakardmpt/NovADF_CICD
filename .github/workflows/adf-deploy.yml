@@ -6,9 +6,9 @@ on:
       ENV:
          required: true
          type: string
-   # push:
-   #  branches:
-   #     - "adf_publish"
+  push:
+    branches:
+       - "adf_publish"
 jobs:
   deploy-adf:
     name: Deploy Azure Data Factory
