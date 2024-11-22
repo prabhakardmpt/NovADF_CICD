@@ -4,10 +4,8 @@ on:
   workflow_dispatch:
     inputs:
        ENV:
-         type: choice
-         options:
-           - uat
-           - prod
+         required: true
+         type: string
    # push:
    #  branches:
    #     - "adf_publish"
