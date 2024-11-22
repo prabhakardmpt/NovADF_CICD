@@ -22,22 +22,22 @@ jobs:
       
       - name: Update factoryName in parameters file
         run: |
-          sed -i "s/\"factoryName\": {\\n\\s*\"value\": \".*\"/\"factoryName\": {\n            \"value\": \"${{ secrets.ADF_NAME }}\"/" ./sep24exercise2/ARMTemplateParametersForFactory.json
+          sed -i "s/\"factoryName\": {\\n\\s*\"value\": \".*\"/\"factoryName\": {\n            \"value\": \"${{ vars.ADF_NAME }}\"/" ./sep24exercise2/ARMTemplateParametersForFactory.json
           cat ./sep24exercise2/ARMTemplateParametersForFactory.json
 
-      # # Step 2: Login to Azure
-      # - name: Login to Azure
-      #   uses: azure/login@v1
-      #   with:
-      #     creds: ${{ secrets.AZURE_CREDENTIALS }}
+      # Step 2: Login to Azure
+      - name: Login to Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      # # Step 3: Deploy ARM Template
-      # - name: Deploy ADF Resources
-      #   uses: azure/arm-deploy@v1
-      #   with:
-      #     scope: resourcegroup
-      #     subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-      #     resourceGroupName: 'RG1TestGroup'
-      #     template: './sep24exercise2/ARMTemplateForFactory.json'
-      #     parameters: './sep24exercise2/ARMTemplateParametersForFactory.json'
-      #     deploymentMode: Incremental
+      # Step 3: Deploy ARM Template
+      - name: Deploy ADF Resources
+        uses: azure/arm-deploy@v1
+        with:
+          scope: resourcegroup
+          subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          resourceGroupName: 'RG1TestGroup'
+          template: './sep24exercise2/ARMTemplateForFactory.json'
+          parameters: './sep24exercise2/ARMTemplateParametersForFactory.json'
+          deploymentMode: Incremental
