@@ -1,16 +1,16 @@
 name: ADF CI/CD Pipeline
 run-name: ADF-deploy-${{ inputs.ENV }}
 on:
- push:
-    branches:
-       - "adf_publish"
- workflow_dispatch:
+  workflow_dispatch:
     inputs:
        ENV:
          type: choice
          options:
            - uat
            - prod
+   # push:
+   #  branches:
+   #     - "adf_publish"
 jobs:
   deploy-adf:
     name: Deploy Azure Data Factory
@@ -24,7 +24,7 @@ jobs:
       
       - name: Update factoryName in parameters file
         run: |
-          sed -i "s/\"value\": \".*\"/\"value\": \"${{ vars.ADF_NAME }}\"/" ./sep24exercise2/ARMTemplateParametersForFactory.json
+          sed -i "s/\"factoryName\": {\\n\\s*\"value\": \".*\"/\"factoryName\": {\n            \"value\": \"${{ secrets.ADF_NAME }}\"/" ./sep24exercise2/ARMTemplateParametersForFactory.json
           cat ./sep24exercise2/ARMTemplateParametersForFactory.json
 
       # # Step 2: Login to Azure
