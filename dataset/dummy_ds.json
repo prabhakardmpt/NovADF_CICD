@@ -1,0 +1,17 @@
+{
+	"name": "dummy_ds",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBloblinkedservice",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "sep24"
+			}
+		}
+	}
+}
