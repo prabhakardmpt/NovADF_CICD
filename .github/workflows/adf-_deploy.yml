@@ -1,6 +1,9 @@
 name: ADF CI/CD Pipeline
 run-name: ADF-deploy-${{ inputs.ENV }}
 on:
+ push:
+    branches:
+       - "adf_publish"
  workflow_dispatch:
     inputs:
        ENV:
