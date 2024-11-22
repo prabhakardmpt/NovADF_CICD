@@ -7,14 +7,14 @@ on:
  workflow_dispatch:
     inputs:
        ENV:
-         type:
+         type: choice
          options:
            - uat
            - prod
 jobs:
   deploy-adf:
     name: Deploy Azure Data Factory
-    environment: ${{ inputs.ENV }}
+    environment: uat
     runs-on: ubuntu-latest
 
     steps:
