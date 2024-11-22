@@ -3,7 +3,7 @@ name: ADF CI/CD Pipeline
 on:
   push:
     branches:
-      - main  # Trigger on changes to the main branch
+      - adf_publish  # Trigger on changes to the main branch
 
 jobs:
   deploy-adf:
