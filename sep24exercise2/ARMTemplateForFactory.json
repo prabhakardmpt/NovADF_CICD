@@ -10,10 +10,6 @@
 		"AzureBloblinkedservice_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBloblinkedservice'"
-		},
-		"ls_kv_nov24_properties_typeProperties_baseUrl": {
-			"type": "string",
-			"defaultValue": "https://KV-DEV-LS.vault.azure.net/"
 		}
 	},
 	"variables": {
@@ -200,19 +196,6 @@
 				"type": "AzureBlobStorage",
 				"typeProperties": {
 					"connectionString": "[parameters('AzureBloblinkedservice_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/ls_kv_nov24')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureKeyVault",
-				"typeProperties": {
-					"baseUrl": "[parameters('ls_kv_nov24_properties_typeProperties_baseUrl')]"
 				}
 			},
 			"dependsOn": []

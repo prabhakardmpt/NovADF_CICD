@@ -7,9 +7,6 @@
 		},
 		"AzureBloblinkedservice_connectionString": {
 			"value": ""
-		},
-		"ls_kv_nov24_properties_typeProperties_baseUrl": {
-			"value": "https://KV-DEV-LS.vault.azure.net/"
 		}
 	}
 }
