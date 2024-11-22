@@ -1,9 +1,11 @@
 name: ADF CI/CD Pipeline
 
 on:
-  push:
-    branches:
-      - adf_publish  # Trigger on changes to the main branch
+   workflow_dispatch:
+    inputs:
+      ENV:
+         required: true
+         type: string
 
 jobs:
   deploy-adf:
