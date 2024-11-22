@@ -1,4 +1,4 @@
-name: ADF CI/CD Pipeline
+name: ADF-Pipeline
 run-name: adf-${{ inputs.ENV }}-deploy
 
 on:
